@@ -1,0 +1,759 @@
+/* Import de la police Roboto depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+
+/* Définition des variables de couleur, de police et de fond */
+:root{
+    --primary-color: #026307;
+    --white-color : #fff;
+    --font-family: Roboto;
+    --background-color: rgb(255 223 190);
+}
+
+/* Animation de fondu au chargement de la page */
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Réinitialisation des marges pour tous les éléments */
+* {
+    margin: 0;
+}
+
+/* Styles généraux du corps de la page */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    animation: fadeInAnimation ease 1s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+    overflow-x:hidden;
+}
+
+/* Styles pour les liens hypertexte */
+a {
+    text-decoration: none;
+    color: var(--white-color);
+    transition: 225ms ease-in-out;
+}
+a:hover {
+    color: rgb(255 223 190);
+    transition: 225ms ease-in-out;
+}
+
+/* Styles pour la barre de défilement personnalisée */
+#style-6::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-6::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+/* Styles pour la poignée de la barre de défilement */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: -webkit-linear-gradient(45deg,
+            rgba(255, 255, 255, .2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, .2) 50%,
+            rgba(255, 255, 255, .2) 75%,
+            transparent 75%,
+            transparent);
+    border-radius: 6px;
+}
+
+.inscription form {
+    height: 494px;
+    width: 434px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+
+.inscription form * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.inscription form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+.inscription label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.inscription input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    color:black;
+}
+
+.inscription ::placeholder {
+    color: #e5e5e5;
+}
+
+.inscription button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.span {
+    font-size: 15px;
+}
+
+.page-accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh; /* Ajustez la hauteur selon vos besoins */
+  }
+  
+  .page-accueil h1, .page-accueil p {
+    padding: 20px 0; /* Ajoutez de l'espace autour de vos titres et paragraphes */
+  }
+
+  .page-salle-libre {
+    background-color: #f0e5d8; /* Couleur de fond pour le contenu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Ombre portée pour donner du relief */
+    max-width: 900px; /* Largeur maximale du contenu */
+    margin: 20px auto; /* Centrer dans la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-salle-libre h1 {
+    color: #333; /* Couleur du texte pour le titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.page-salle-libre form {
+    width: 100%; /* Pleine largeur */
+    margin-bottom: 20px; /* Espacement sous le formulaire */
+}
+
+.page-salle-libre label {
+    display: block;
+    margin-bottom: 5px; /* Espacement sous le label */
+}
+
+.page-salle-libre input[type="date"],
+.page-salle-libre select {
+    width: calc(100% - 22px); /* Ajuster la largeur pour prendre en compte le padding et les bordures */
+    padding: 10px;
+    margin-bottom: 10px; /* Espacement sous les champs de saisie */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.page-salle-libre button {
+    background-color: #4CAF50; /* Couleur de fond pour le bouton */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-salle-libre button:hover {
+    background-color: #45a049; /* Couleur au survol du bouton */
+}
+
+.page-salle-libre table {
+    width: 100%; /* Pleine largeur */
+    border-collapse: collapse; /* Fusionner les bordures */
+    margin-top: 20px; /* Espacement au-dessus du tableau */
+}
+
+.page-salle-libre th,
+.page-salle-libre td {
+    border: 1px solid #ccc; /* Couleur et style des bordures des cellules */
+    padding: 8px; /* Espacement intérieur des cellules */
+    text-align: left;
+}
+
+.page-salle-libre th {
+    background-color: #a0522d; /* Couleur de fond des en-têtes de tableau */
+    color: white; /* Couleur du texte des en-têtes */
+}
+
+.page-salle-libre tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+.page-salle-libre tr:hover {
+    background-color: #ddd; /* Couleur de fond au survol des lignes */
+}
+
+.page-reservations-liste {
+    background-color: #f0e5d8; /* Couleur de fond pour le contenu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Ombre portée pour donner du relief */
+    max-width: 900px; /* Largeur maximale du contenu */
+    margin: 20px auto; /* Centrer dans la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-reservations-liste h1 {
+    color: #333; /* Couleur du texte pour le titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.page-reservations-liste form {
+    width: 100%; /* Pleine largeur */
+    margin-bottom: 20px; /* Espacement sous le formulaire */
+}
+
+.page-reservations-liste label {
+    display: block;
+    margin-bottom: 5px; /* Espacement sous le label */
+}
+
+.page-reservations-liste input[type="date"],
+.page-reservations-liste select {
+    width: calc(100% - 22px); /* Ajuster la largeur pour prendre en compte le padding et les bordures */
+    padding: 10px;
+    margin-bottom: 10px; /* Espacement sous les champs de saisie */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.page-reservations-liste button {
+    background-color: #4CAF50; /* Couleur de fond pour le bouton */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-reservations-liste button:hover {
+    background-color: #45a049; /* Couleur au survol du bouton */
+}
+
+.page-reservations-liste table {
+    width: 100%; /* Pleine largeur */
+    border-collapse: collapse; /* Fusionner les bordures */
+    margin-top: 20px; /* Espacement au-dessus du tableau */
+}
+
+.page-reservations-liste th,
+.page-reservations-liste td {
+    border: 1px solid #ccc; /* Couleur et style des bordures des cellules */
+    padding: 8px; /* Espacement intérieur des cellules */
+    text-align: left;
+}
+
+.page-reservations-liste th {
+    background-color: #a0522d; /* Couleur de fond des en-têtes de tableau */
+    color: white; /* Couleur du texte des en-têtes */
+}
+
+.page-reservations-liste tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+.page-reservations-liste tr:hover {
+    background-color: #ddd; /* Couleur de fond au survol des lignes */
+}
+
+
+.form-ajout-reservation {
+    background-color: #f0e5d8; /* Couleur de fond pour le formulaire */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Ombre portée pour le formulaire */
+    max-width: 600px; /* Largeur maximale du formulaire */
+    margin: 20px auto; /* Centrer le formulaire horizontalement */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-ajout-reservation h1 {
+    text-align: center;
+    color: #333; /* Couleur de votre choix pour le titre */
+}
+
+.form-ajout-reservation label {
+    margin-top: 10px; /* Espace au-dessus de chaque label */
+    font-weight: bold;
+}
+
+.form-ajout-reservation input[type="date"],
+.form-ajout-reservation select {
+    width: 100%; /* La largeur des champs de saisie à 100% de leur conteneur */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px; /* Espace au-dessus de chaque champ de saisie */
+}
+
+.form-ajout-reservation button {
+    background-color: #4CAF50; /* Couleur de fond pour le bouton */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Espace au-dessus du bouton */
+}
+
+.form-ajout-reservation button:hover {
+    background-color: #45a049;
+}
+
+.form-suppression-reservation {
+    background-color: #f0e5d8; /* Couleur de fond pour le formulaire */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Ombre portée pour le formulaire */
+    max-width: 600px; /* Largeur maximale du formulaire */
+    margin: 20px auto; /* Centrer le formulaire horizontalement */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-suppression-reservation h1 {
+    text-align: center;
+    color: #333; /* Couleur de votre choix pour le titre */
+}
+
+.form-suppression-reservation label {
+    margin-top: 10px; /* Espace au-dessus de chaque label */
+    font-weight: bold;
+}
+
+.form-suppression-reservation input[type="date"],
+.form-suppression-reservation select {
+    width: 100%; /* La largeur des champs de saisie à 100% de leur conteneur */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px; /* Espace au-dessus de chaque champ de saisie */
+}
+
+.form-suppression-reservation button {
+    background-color: #E53935; /* Couleur de fond pour le bouton de suppression */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Espace au-dessus du bouton */
+}
+
+.form-suppression-reservation button:hover {
+    background-color: #D32F2F;
+}
+
+
+.page-validation-reservations {
+    background-color: #f0e5d8; /* Couleur de fond pour le contenu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Ombre portée pour donner du relief */
+    max-width: 1000px; /* Largeur maximale du contenu */
+    margin: 20px auto; /* Centrer dans la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-validation-reservations h1 {
+    color: #333; /* Couleur du texte pour le titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.page-validation-reservations form {
+    width: 100%; /* Pleine largeur */
+    margin-bottom: 20px; /* Espacement sous le formulaire */
+}
+
+.page-validation-reservations table {
+    width: 100%; /* Pleine largeur */
+    border-collapse: collapse; /* Fusionner les bordures */
+    table-layout: fixed; /* Tableau avec une largeur fixe pour éviter le débordement */
+}
+
+.page-validation-reservations th,
+.page-validation-reservations td {
+    border: 1px solid #ccc; /* Couleur et style des bordures des cellules */
+    padding: 8px; /* Espacement intérieur des cellules */
+    text-align: left;
+    word-wrap: break-word; /* Permet de casser les mots longs pour éviter le débordement */
+}
+
+.page-validation-reservations th {
+    background-color: #a0522d; /* Couleur de fond des en-têtes de tableau */
+    color: white; /* Couleur du texte des en-têtes */
+}
+
+.page-validation-reservations td {
+    background-color: #ffffff; /* Couleur de fond des cellules */
+}
+
+.page-validation-reservations input[type="checkbox"] {
+    margin: auto; /* Centrer les cases à cocher */
+    display: block;
+}
+
+.page-validation-reservations input[type="submit"] {
+    background-color: #4CAF50; /* Couleur de fond pour le bouton d'enregistrement */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px !important; /* Espacement au-dessus du bouton */
+    margin: auto;
+    display: block;
+}
+
+.page-validation-reservations input[type="submit"]:hover {
+    background-color: #45a049; /* Couleur au survol du bouton */
+}
+
+.page-validation-reservations tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+.page-validation-reservations tr:hover {
+    background-color: #ddd; /* Couleur de fond au survol des lignes */
+}
+
+
+.form-export-xml {
+    background-color: #f0e5d8; /* Couleur de fond pour le formulaire */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Ombre portée pour le formulaire */
+    max-width: 400px; /* Largeur maximale du formulaire */
+    margin: 20px auto; /* Centrer le formulaire horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-export-xml label {
+    margin-bottom: 10px; /* Espace au-dessous du label */
+    font-weight: bold;
+}
+
+.form-export-xml input[type="number"] {
+    width: 100%; /* La largeur du champ de saisie à 100% de son conteneur */
+    padding: 10px;
+    margin-bottom: 10px; /* Espace au-dessous du champ de saisie */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-export-xml input[type="submit"] {
+    background-color: #4CAF50; /* Couleur de fond pour le bouton */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.form-export-xml input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.page-reservations-structure {
+    background-color: #f0e5d8; /* Couleur de fond pour le contenu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Ombre portée pour donner du relief */
+    max-width: 900px; /* Largeur maximale du contenu */
+    margin: 20px auto; /* Centrer dans la page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-reservations-structure h1 {
+    color: #333; /* Couleur du texte pour le titre */
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+.page-reservations-structure form {
+    width: 100%; /* Pleine largeur */
+    margin-bottom: 20px; /* Espacement sous le formulaire */
+}
+
+.page-reservations-structure label {
+    display: block;
+    margin-bottom: 5px; /* Espacement sous le label */
+}
+
+.page-reservations-structure input[type="text"],
+.page-reservations-structure select {
+    width: calc(100% - 22px); /* Ajuster la largeur pour prendre en compte le padding et les bordures */
+    padding: 10px;
+    margin-bottom: 10px; /* Espacement sous les champs de saisie */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.page-reservations-structure button {
+    background-color: #4CAF50; /* Couleur de fond pour le bouton */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-reservations-structure button:hover {
+    background-color: #45a049; /* Couleur au survol du bouton */
+}
+
+.page-reservations-structure table {
+    width: 100%; /* Pleine largeur */
+    border-collapse: collapse; /* Fusionner les bordures */
+    margin-top: 20px; /* Espacement au-dessus du tableau */
+}
+
+.page-reservations-structure th,
+.page-reservations-structure td {
+    border: 1px solid #ccc; /* Couleur et style des bordures des cellules */
+    padding: 8px; /* Espacement intérieur des cellules */
+    text-align: left;
+}
+
+.page-reservations-structure th {
+    background-color: #a0522d; /* Couleur de fond des en-têtes de tableau */
+    color: white; /* Couleur du texte des en-têtes */
+}
+
+.page-reservations-structure tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+.page-reservations-structure tr:hover {
+    background-color: #ddd; /* Couleur de fond au survol des lignes */
+}
+
+.form-ajout-utilisateur {
+    background-color: #f0e5d8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-ajout-utilisateur h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-ajout-utilisateur label {
+    margin-bottom: 5px;
+}
+
+.form-ajout-utilisateur input,
+.form-ajout-utilisateur select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-ajout-utilisateur button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-ajout-utilisateur button:hover {
+    background-color: #45a049;
+}
+
+.page-gerer-utilisateur {
+    background-color: #f0e5d8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-gerer-utilisateur .utilisateur {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-gerer-utilisateur .utilisateur span {
+    margin-right: 10px;
+}
+
+.page-gerer-utilisateur select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.page-gerer-utilisateur input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.page-gerer-utilisateur button{
+    background-color: #E53935;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.page-gerer-utilisateur button:hover{
+    background-color: #D32F2F;
+}
+
+.page-gerer-utilisateur input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.page-gerer-utilisateur .boutonsaction button{
+    margin-left: 10px;
+}
+
+.form-export-xml-utilisateur {
+    background-color: #f0e5d8; /* Couleur de fond pour le formulaire */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Ombre portée pour le formulaire */
+    max-width: 600px; /* Largeur maximale du formulaire */
+    margin: 20px auto; /* Centrer le formulaire horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form-export-xml-utilisateur input[type="submit"] {
+    background-color: #4CAF50; /* Couleur de fond pour le bouton */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+
+}
+
+.form-export-xml-utilisateur input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.page-deconnexion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    text-align: center;
+}
+
+.page-deconnexion h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.page-deconnexion h3 {
+    font-size: 1em;
+    color: #333;
+}
+
+.page-deconnexion h3 a {
+    color: red;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.page-deconnexion h3 a:hover {
+    text-decoration: underline;
+}
